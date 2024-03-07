@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-//https://www.codelabsdash.com/lessons/backend/node/Authentication_Part_1
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
