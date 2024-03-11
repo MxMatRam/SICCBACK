@@ -32,13 +32,13 @@ const userSchema = new mongoose.Schema({
         default: 'user',
     },
 
-    verificationToken: String,
-    isVerified: {
-        type: Boolean,
+
+    isAdmin: {
+        type : Boolean,
         default: false,
     },
 
-    verified: Date,
+    
 })
 
 userSchema.pre('save', async function () {
@@ -62,4 +62,4 @@ userSchema.methods.comparePassword = async function (incomingPassword) {
     return isMatch;
 };
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', userSchema);

@@ -9,6 +9,11 @@ const connectToDB = require('./db/mongoose');
 // * MIDDLEWARE
 
 // * ROUTES
+app.get('/', (req, res) => {
+	res.send('Main Route');
+});
+
+
 
 // TEMP
 app.get('/', (req, res) => {
