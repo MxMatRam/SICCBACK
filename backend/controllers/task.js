@@ -1,25 +1,41 @@
-// Task { name, mission id, cotegory, deadline}
-const Task = require ('../model/task.model');
-
-const getAllTasks = async (request, response) => {
- 
+const getAllTasks = async (req, res) => {
+    try {
+        res.status(200).send("Now Presenting all the Tasks");
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 };
 
-const getTask = async (request, response) => {
- 
+const getTask = async (req, res) => {
+    try {
+        res.status(200).send("Here is one Job");
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 };
 
-
-const createTask = async (request, response) => {
- 
+const createTask = async (req, res) => {
+    try {
+        res.status(200).send("Successfully Updated the Task");
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 };
 
-const updateTask = async (request, response) => {
- 
+const updateTask = async (req, res) => {
+    try {
+        res.status(200).send("Successfully Created a Task");
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 };
 
-const deleteTask = async (request, response) => {
- 
+const deleteTask = async (req, res) => {
+    try {
+        res.status(200).send("Abracadabra the Task is Gone");
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 };
 
 module.exports = { 

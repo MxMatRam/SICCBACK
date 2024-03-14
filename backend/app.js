@@ -5,7 +5,7 @@ require('dotenv').config();
 // * CONFIG
 const PORT = 5001;
 const SERVER_URL = `http://localhost:${PORT}`;
-
+const connectToDB = require('./db/mongoose');
 // * MIDDLEWARE
 
 // * ROUTES
@@ -19,3 +19,16 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server serving at: ${SERVER_URL}`);
 });
+
+
+const start = async () => {
+    try {
+        await connectToDB(process.env.MONGOOSE_CONNECTION);
+    }
+
+    catch (err) {
+        console.log(err);
+    }
+};
+
+start();

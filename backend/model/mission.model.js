@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const missionSchema = new mongoose.Schema(
-    {
+const MissionSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    launchdate: Date,
+});
 
-    },
-);
-
-module.exports = mongoose.model('Mission', missionSchema);
+module.exports = mongoose.model('Mission', MissionSchema);
